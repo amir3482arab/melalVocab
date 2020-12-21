@@ -41,7 +41,7 @@ List vocab() {
   //Clothing
   vocab2.add(Vocab(
       "Shoes",
-      "https://s16.picofile.com/file/8418347718/shose.jpg",
+      "https://s16.picofile.com/file/8418369742/shoes.jpg",
       "https://s17.picofile.com/file/8418347950/shoes.mp3.html",
       4));
 

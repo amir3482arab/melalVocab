@@ -59,11 +59,15 @@ Widget categoryCard(Category model, BuildContext context) {
         ),
         title: Text(
           model.title,
-          style: Theme.of(context).textTheme.subtitle1,
+          style: Theme.of(context).textTheme.headline4.copyWith(
+                fontSize: caption1Size(context),
+              ),
+          textAlign: TextAlign.center,
         ),
         trailing: Icon(
           Icons.arrow_forward_ios,
           color: Colors.grey.shade400,
+          size: mediumSize(context),
         ),
       ),
       margin: EdgeInsets.symmetric(
