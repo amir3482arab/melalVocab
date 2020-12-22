@@ -1,6 +1,8 @@
+
 import 'package:vocabulary_app/models/category.dart';
-import 'package:vocabulary_app/models/types.dart';
 import 'package:vocabulary_app/models/vocab.dart';
+
+import 'vocab.dart';
 
 List categories() {
   List category = new List();
@@ -16,12 +18,13 @@ List categories() {
   return category;
 }
 
-List vocab() {
-  List vocab2 = new List();
+List<Vocab> vocab() {
+  List vocab2 = List<Vocab>();
 
   //Foods
   vocab2.add(Vocab("Rice", "https://s16.picofile.com/file/8418347300/Rice.jpg",
       "https://s17.picofile.com/file/8418347926/rice.mp3.html", 1));
+
 
   //Fruits
   vocab2.add(Vocab(

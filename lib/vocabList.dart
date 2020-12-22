@@ -8,6 +8,9 @@ import 'package:vocabulary_app/models/vocab.dart';
 import 'package:vocabulary_app/theme/dimens.dart';
 import 'package:vocabulary_app/theme/text_widgets.dart';
 
+import 'models/setData.dart';
+import 'models/setData.dart';
+
 class VocabList extends StatefulWidget {
   final int id;
 
@@ -20,6 +23,14 @@ class VocabList extends StatefulWidget {
 class VocabListState extends State<VocabList> {
   @override
   Widget build(BuildContext context) {
+    List<Vocab> fakeList() {
+      if (vocab().isNotEmpty ) {
+        var result =
+            vocab().where((element) => element.categoryID == widget.id);
+        return result.toList(growable: true);
+      }else return [];
+    }
+
     var theme = Theme.of(context);
 
     return Scaffold(
@@ -33,9 +44,9 @@ class VocabListState extends State<VocabList> {
         ),
       ),
       body: ListView.builder(
-        itemBuilder: (context, index) => vocabCard(vocab()[index], context),
+        itemBuilder: (context, index) => vocabCard(fakeList()[index], context),
         physics: BouncingScrollPhysics(),
-        itemCount: categories().length,
+        itemCount: fakeList().length,
       ),
     );
   }

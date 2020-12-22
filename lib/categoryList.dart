@@ -6,10 +6,17 @@ import 'package:vocabulary_app/theme/colors.dart';
 import 'package:vocabulary_app/theme/dimens.dart';
 import 'package:vocabulary_app/vocabList.dart';
 
+import 'models/setData.dart';
+import 'models/vocab.dart';
+
 class CategoryList extends StatefulWidget {
+
+
   @override
   State<StatefulWidget> createState() => CategoryListState();
 }
+
+
 
 class CategoryListState extends State<CategoryList> {
   List list = categories();
