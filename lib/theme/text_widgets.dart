@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'colors.dart';
 import 'dimens.dart';
 
-
 Widget bodyText1(BuildContext context, String text,
     {Color color: AppColors.textColorLight}) {
   return Text(
@@ -45,6 +44,7 @@ Widget headline4(BuildContext context, String text,
     {Color color: AppColors.textColorLight}) {
   return Text(
     text,
+    textAlign: TextAlign.center,
     style: TextStyle(
         fontFamily: "balsamiq",
         color: color,

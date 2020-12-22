@@ -6,5 +6,5 @@ class Vocab {
   String sound;
   int categoryID;
 
-  Vocab(this.title,this.image,this.sound,this.categoryID);
+  Vocab(this.title, this.image, this.sound, this.categoryID);
 }
